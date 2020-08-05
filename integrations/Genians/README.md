@@ -13,13 +13,13 @@
 <p>Before you can use this integration in Demisto, you need to enable certain modules in your Genian NAC environment.</p>
 <p><strong>Genian NAC Web Console</strong></p>
 <ol>
-<li>This is the network address of the Genian NAC Enterprise or standalone Appliance. (The host on which the the Genian NAC is hosted.) For example, if the Genian NAC is hosted at the IP address 192.168.100.100, then you enter https://192.168.10.100:8443/mc2 </li>
+<li>This is the network address of the Genian NAC Enterprise or standalone Appliance. (The host on which the the Genian NAC is hosted.) For example, if the Genian NAC is hosted at the IP address<span> </span><em>192.168.100.100</em><span></span>, then you enter<span> </span><em>https://192.168.10.100:8443/mc2</em></li>
 </ol>
 <p><strong>Enforcement Mode</strong></p>
 <ol>
-<li>Go to System > System > Click IP of Sensor > Click Sensor Tab > Click Sensor on the right</li>
-<li>Go to Sensor Operation > Sensor Mode and change the Sensor Mode to 'host'</li>
-<li>Change Sensor Operationg Mode to 'Enforcement'</li>
+<li>Go to<span> </span><em>System &gt; System &gt; Click IP of Sensor &gt; Click Sensor Tab &gt; Click Sensor on the right</em></li>
+<li>Go to<span> </span><em>Sensor Operation &gt; Sensor Mode</em><span> </span>and change the<span> </span><em>Sensor Mode</em><span> </span>to '<span></span><strong>host</strong>'</li>
+<li>Change<span> </span><em>Sensor Operationg Mode</em><span> </span>to '<span></span><strong>Enforcement</strong>'</li>
 <ul>
 <li>Monitoring: (Default) Monitoring mode. No blocking.</li>
 <li>Enforcement: Blocking mode</li>
@@ -27,12 +27,12 @@
 </ol>
 <p><strong>Specifying the Tag to be assigned to the node under control.</strong></p>
 <ol>
-<li>Go to Preferences > Properties > Tag</li>
+<li>Go to<span> </span><em>Preferences &gt; Properties &gt; Tag</em></li>
 <li>Create new Tag or use existing Tag (e.g. THREAT)</li>
 </ol>
 <p><strong>Create Enforcement Policy</strong></p>
 <ol>
-<li>Reference the Enforcement Policy section in the Genians Docs</li>
+<li>Reference the Enforcement Policy section in the<span> </span><a href="https://docs.genians.com/release/en/controlling/understanding-policy.html#enforcement-policy" rel="nofollow">Genians Docs</a></li>
 </ol>
 </div>
 
@@ -40,32 +40,35 @@
 <h2>Configuration Parameters</h2>
 <p><strong>Server IP</strong></p>
 <ol>
-<li>If the Genian NAC is hosted at the IP address 192.168.100.100, enter 192.168.100.100.</li>
+<li>Input Genian NAC IP Address (e.g. 192.168.100.100)</li>
 </ol>
 <p><strong>API Key</strong></p>
 <ol>
 <li>You can generate an API Key in the Genian NAC Web Console.</li>
-<li>Go to Management > User > Administrator tab > API Key to generate a key and save it.</li>
+<ul>
+<li>Go to<span> </span><em>Management &gt; User &gt; Administrator tab &gt; API Key</em><span> </span>to generate a key and save it.</li>
+</ul>
+<li>Input API Key (e.g. 912fae69-b454-4608-bf4b-fa142353b463)</li>
 </ol>
 <p><strong>Tag Name</strong></p>
 <ol>
-<li>Enter Tag Name to use for IP Block</li>
+<li>Input Tag Name for IP Block (e.g. THREAT, GUEST)</li>
 </ol>
 </div>
 
 <div class="cl-preview-section">
 <h2>Configure Genians on Demisto</h2>
 <ol>
-<li>Navigate to Settings > Integrations > Servers & Services.</li>
+<li>Navigate to<span> </span><strong>Settings</strong><span> </span>&gt;<span> </span><strong>Integrations</strong><span> </span>&gt;<span> </span><strong>Servers &amp; Services</strong>.</li>
 <li>Search for Genians</li>
-<li>Click Add instance to create and configure a new integration instance.</li>
+<li>Click<span> </span><strong>Add instance</strong><span> </span>to create and configure a new integration instance.</li>
 <ul>
-<li>Name: a textual name for the integration instance.</li>
-<li>Server IP</li>
-<li>API Key</li>
-<li>Tag Name</li>
+<li><strong>Name</strong>: a textual name for the integration instance.</li>
+<li><strong>Server IP</strong></li>
+<li><strong>API Key</strong></li>
+<li><strong>Tag Name</strong></li>
 </ul>
-<li>Click Test to validate the token.</li>
+<li>Click<span> </span><strong>Test</strong><span> </span>to validate the token.</li>
 </ol>
 </div>
 
@@ -129,7 +132,7 @@
 [
     {
         "Type": "node",
-        "Description": "test",
+        "Description": "Threat",
         "IDX": 9,
         "nodeId": "dd9394cc-4495-103a-8010-2cf05d0cf498-537696fb",
         "Name": "THREAT"
