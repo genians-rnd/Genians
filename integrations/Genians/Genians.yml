@@ -1,260 +1,57 @@
-commonfields:
-  id: Genians
-  version: -1
-name: Genians
-display: Genians
 category: Network Security
-image: data:image/png;base64,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
-description: ip block
-detaileddescription: |-
-  Generating and obtaining an API Token
-  - You can generate an API Key in the Genian NAC web console.
-  - Go to Management > User > Administrator tab > API Key to generate a key and save it.
+commonfields:
+  id: e1686e17-d08a-4bcd-b21e-1ff1e540585d
+  version: -1
 configuration:
 - display: Server IP (e.g. 172.29.62.26)
+  hidden: false
   name: server_ip
-  defaultvalue: ""
-  type: 0
   required: true
+  type: 0
 - display: API Key (e.g. 912fae69-b454-4608-bf4b-fa142353b463)
+  hidden: false
   name: apikey
-  defaultvalue: ""
+  required: true
   type: 4
-  required: true
 - display: Trust any certificate (not secure)
+  hidden: false
   name: insecure
-  defaultvalue: "false"
-  type: 8
   required: false
+  type: 8
 - display: Tag Name (e.g. THREAT, GUEST)
+  hidden: false
   name: tag_name
-  defaultvalue: ""
-  type: 0
   required: true
-- display: Fetch indicators
-  name: feed
-  defaultvalue: ""
-  type: 8
-  required: false
+  type: 0
+description: ip block
+display: Genians
+name: e1686e17-d08a-4bcd-b21e-1ff1e540585d
 script:
-  script: |2
-
-    ''' IMPORT '''
-
-    import json
-    import requests
-    import urllib
-
-    # Disable insecure warnings
-    requests.packages.urllib3.disable_warnings()
-
-
-    ''' PARAMS '''
-
-    SERVER_IP = demisto.params().get("server_ip")
-    APIKEY = demisto.params().get("apikey")
-    TAG_NAME = demisto.params().get("tag_name")
-
-    # Genian NAC Policy Center (Server) URL
-    BASE_URL = "https://"+SERVER_IP+":8443/mc2"
-    # Genian NAC REST API Request URL
-    REQUEST_BASE_URL = "https://"+SERVER_IP+":8443/mc2/rest/"
-    # Should We use SSL
-    USE_SSL = not demisto.params().get("insecure", False)
-    # Response Content Type
-    HEADER = {
-        "accept" : "application/json",
-        "content-type" : "application/json;charset=UTF-8"
-    }
-
-
-    ''' HELPER FUNCTIONS '''
-
-    def http_request(method:str, url:str, body:dict=None, header=HEADER) -> any:
-        """
-        Makes an API call with the given arguments
-        """
-        try:
-            result = requests.request(
-                method,
-                url,
-                data=body,
-                headers=header,
-                verify=USE_SSL,
-            )
-            if result.status_code < 200 or result.status_code >= 300:
-                raise Exception("Error in Genian NAC Integration API Call. Code: {0} - {1}".format(str(result.status_code), str(result.reason)))
-
-            json_result = result.json()
-
-            return json_result
-
-        except Exception as e:
-            return_error(str(e))
-
-    def get_ip_nodeid(ip:str):
-        URL = REQUEST_BASE_URL + "nodes/"+ip+"/managementscope?apiKey=" + APIKEY
-        result = http_request("GET", URL)
-        return result
-
-    def get_tag_list():
-        URL = REQUEST_BASE_URL + "tags?page=1&pageSize=30&npName="+TAG_NAME+"&apiKey="+APIKEY
-        result = http_request("GET", URL)
-        return result
-
-
-    ''' COMMANDS + REQUESTS FUNCTIONS '''
-
-    def assign_ip_tag(nodeid:str):
-        URL = REQUEST_BASE_URL + "nodes/"+nodeid+"/tags?apiKey=" + APIKEY
-        data = [{
-            "id" : "",
-            "name" : TAG_NAME,
-            "description" : "",
-            "startDate" : "",
-            "expireDate" : "",
-            "periodType" : "",
-            "expiryPeriod" : ""
-        }]
-        result = http_request("POST", URL, body=json.dumps(data))
-        return result
-
-    def assign_ip_tag_command():
-        IP = demisto.getArg("ip")
-
-        result = get_ip_nodeid(IP)
-        nodeid = result[0]["nl_nodeid"]
-
-        if not nodeid:
-            demisto.results("IP not found. [{0}] is not exist in your network".format(IP))
-        else:
-            result2 = assign_ip_tag(nodeid)
-
-            tag_check = "assign fail"
-            for a in result2:
-                if a["Name"] == TAG_NAME:
-                    tag_check = TAG_NAME
-                    break
-
-            if tag_check == TAG_NAME:
-                hr = "IP : [{0}], [{1}] Tag assign success.".format(IP, TAG_NAME)
-                assign_tag = {
-                    "nodeId" : nodeid,
-                    "Name" : TAG_NAME
-                }
-                demisto.results({
-                    'Type': entryTypes['note'],
-                    'ContentsFormat': formats['json'],
-                    'Contents': result2,
-                    'ReadableContentsFormat': formats['text'],
-                    'HumanReadable': hr,
-                    'EntryContext': {
-                        "genian.nac.tag.(val.Tag == obj.Tag)": assign_tag
-                    }
-                })
-            else:
-                raise Exception("IP : [{0}], [{1}] Tag assign fail.".format(IP, TAG_NAME))
-
-    def unassign_ip_tag(nodeid:str, data):
-        URL = REQUEST_BASE_URL + "nodes/"+nodeid+"/tags?apiKey=" + APIKEY
-        result = http_request("DELETE", URL, body=data)
-        return result
-
-    def unassign_ip_tag_command():
-        IP = demisto.getArg("ip")
-
-        result = get_ip_nodeid(IP)
-        nodeid = result[0]["nl_nodeid"]
-
-        if not nodeid:
-            demisto.results("IP not found. [{0}] is not exist in your network".format(IP))
-        else:
-            result2 = get_tag_list()
-
-            tag_check = "tag_not_exists"
-            for a in result2["result"]:
-                if a["NP_NAME"] == TAG_NAME:
-                    tag_check = a["NP_IDX"]
-                    break
-
-            if tag_check != "tag_not_exists":
-                if int(tag_check):
-                    data = "[\""+str(tag_check)+"\"]"
-                    result3 = unassign_ip_tag(nodeid, data)
-                    if str(result3) == "[]":
-                        hr = "IP : [{0}], [{1}] Tag unassign success.".format(IP, TAG_NAME)
-                        unassign_tag = {
-                            "nodeId" : nodeid,
-                            "Name" : TAG_NAME
-                        }
-                        demisto.results({
-                            'Type': entryTypes['note'],
-                            'ContentsFormat': formats['json'],
-                            'Contents': result3,
-                            'ReadableContentsFormat': formats['text'],
-                            'HumanReadable': hr,
-                            'EntryContext': {
-                                "genian.nac.tag.(val.Tag == obj.Tag)": unassign_tag
-                            }
-                        })
-                    else:
-                        raise Exception("IP : [{0}], [{1}] Tag unassign fail.".format(THREAT_IP, TAG_NAME))
-                else:
-                    demisto.results("[{0}] Tag not found.".format(TAG_NAME))
-            else:
-                demisto.results("[{0}] Tag not found.".format(TAG_NAME))
-
-    def main():
-        """Main execution block"""
-        try:
-
-            LOG("Command being called is {0}".format(demisto.command()))
-
-            if demisto.command() == "test-module":
-                demisto.results('ok')
-            elif demisto.command() == 'genian-nac-assign-ip-tag':
-                demisto.results(assign_ip_tag_command())
-            elif demisto.command() == 'genian-nac-unassign-ip-tag':
-                demisto.results(unassign_ip_tag_command())
-            else:
-                raise NotImplementedError("Command {} was not implemented.".format(demisto.command()))
-
-        except Exception as e:
-            return_error(str(e))
-
-        finally:
-            LOG.print_log()
-
-    # python2 uses __builtin__ python3 uses builtins
-    if __name__ == '__builtin__' or __name__ == 'builtins':
-        main()
-  type: python
   commands:
-  - name: genian-nac-assign-ip-tag
-    arguments:
-    - name: ip
-      required: true
+  - arguments:
+    - default: false
       description: Threat IP Address (e.g. 192.168.100.87)
-    outputs:
-    - contextPath: genian.nac.tag.nodeId
-      description: nodeid of IP
-      type: string
-    - contextPath: genian.nac.tag.Name
-      description: Tag name
-      type: string
-    description: Assigns a tag to the Node specified.
-  - name: genian-nac-unassign-ip-tag
-    arguments:
-    - name: ip
+      isArray: false
+      name: ip
       required: true
-      description: IP Address (e.g. 192.168.100.87)
+      secret: false
+    deprecated: false
+    description: Assigns a tag to the Node specified.
+    execution: false
+    name: genian-nac-assign-ip-tag
     outputs:
     - contextPath: genian.nac.tag.nodeId
       description: nodeid of IP
+      type: String
     - contextPath: genian.nac.tag.Name
       description: Tag name
-    description: Removes the tag(s) from the Node specified.
-  dockerimage: demisto/python3:3.8.2.6981
+      type: String
+  dockerimage: demisto/python3:3.7.4.2245
+  feed: false
+  isfetch: false
+  longRunning: false
+  longRunningPort: false
   runonce: false
+  script: '-'
   subtype: python3
-sourcemoduleid: Genian NAC
+  type: python
