@@ -25,7 +25,7 @@ configuration:
   type: 0
 description: ip block
 display: Genians
-name: e1686e17-d08a-4bcd-b21e-1ff1e540585d
+name: Genians
 script:
   commands:
   - arguments:
@@ -46,6 +46,24 @@ script:
     - contextPath: genian.nac.tag.Name
       description: Tag name
       type: String
+  - arguments:
+    - default: false
+      description: IP Address (e.g. 192.168.100.87)
+      isArray: false
+      name: ip
+      required: true
+      secret: false
+    deprecated: false
+    description: Removes the tag(s) from the Node specified.
+    execution: false
+    name: genian-nac-unassign-ip-tag
+    outputs:
+    - contextPath: genian.nac.tag.nodeId
+      description: nodeid of IP
+      type: String
+    - contextPath: genian.nac.tag.Name
+      description: Tag name
+      type: String
   dockerimage: demisto/python3:3.7.4.2245
   feed: false
   isfetch: false
@@ -55,3 +73,5 @@ script:
   script: '-'
   subtype: python3
   type: python
+tests:
+- Genians Test
