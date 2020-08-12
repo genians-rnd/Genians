@@ -2,7 +2,6 @@ import demistomock as demisto
 import CommonServerPython
 import pytest
 import json
-import requests_mock
 
 
 integration_params = {
