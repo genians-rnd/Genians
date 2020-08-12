@@ -30,7 +30,7 @@ HEADER = {
 
 ''' HELPER FUNCTIONS '''
 
-def http_request(method:str, url:str, body:dict=None, header=HEADER) -> any:
+def http_request(method:str, url:str, body:dict=None) -> any:
     """
     Makes an API call with the given arguments
     """
@@ -39,7 +39,7 @@ def http_request(method:str, url:str, body:dict=None, header=HEADER) -> any:
             method,
             url,
             data=body,
-            headers=header,
+            headers=HEADER,
             verify=USE_SSL,
         )
         if result.status_code < 200 or result.status_code >= 300:
