@@ -1,11 +1,6 @@
-id: 9aceac37-1d56-486a-88ff-5c7da42a380f
+id: Genians Test
 version: 9
-name: Genians-Test
-description: |-
-  This playbook blocks malicious IPs using all integrations that are enabled.
-
-  Supported integrations for this playbook:
-  * Genian NAC
+name: Genians Test
 starttaskid: "0"
 tasks:
   "0":
@@ -71,7 +66,6 @@ tasks:
       brand: ""
     nexttasks:
       '#none#':
-      - "19"
       - "20"
     separatecontext: false
     view: |-
@@ -88,10 +82,10 @@ tasks:
     quietmode: 0
   "8":
     id: "8"
-    taskid: fed90fcf-42bb-4f0a-8ee6-2e863e24f0d4
+    taskid: 803e5ba8-b16f-4811-8765-ac56fe9aa1f3
     type: condition
     task:
-      id: fed90fcf-42bb-4f0a-8ee6-2e863e24f0d4
+      id: 803e5ba8-b16f-4811-8765-ac56fe9aa1f3
       version: -1
       name: Is there an IP to block?
       description: Verify that the playbook input includes at least one IP to block.
@@ -124,56 +118,15 @@ tasks:
     ignoreworker: false
     skipunavailable: false
     quietmode: 0
-  "11":
-    id: "11"
-    taskid: 5a1ce507-df4d-45df-8eb4-26a1c0bb4304
-    type: playbook
-    task:
-      id: 5a1ce507-df4d-45df-8eb4-26a1c0bb4304
-      version: -1
-      name: Add Indicator to Miner - Minemeld
-      description: Add indicators to the relevant Miner using MineMeld.
-      playbookName: Add Indicator to Miner - Palo Alto MineMeld
-      type: playbook
-      iscommand: false
-      brand: ""
-    nexttasks:
-      '#none#':
-      - "2"
-    scriptarguments:
-      Indicator:
-        complex:
-          root: inputs.IP
-      MinerName:
-        complex:
-          root: inputs.IPBlacklistMiner
-    separatecontext: true
-    loop:
-      iscommand: false
-      exitCondition: ""
-      wait: 1
-      max: 0
-    view: |-
-      {
-        "position": {
-          "x": 500,
-          "y": 660
-        }
-      }
-    note: false
-    timertriggers: []
-    ignoreworker: false
-    skipunavailable: false
-    quietmode: 0
   "12":
     id: "12"
-    taskid: 9a75be08-417a-4cf9-8298-2cb8bbdbc286
+    taskid: 4304f2b1-1c7e-43a4-8f3b-2e4c0f61c9c4
     type: condition
     task:
-      id: 9a75be08-417a-4cf9-8298-2cb8bbdbc286
+      id: 4304f2b1-1c7e-43a4-8f3b-2e4c0f61c9c4
       version: -1
       name: Is Genian NAC enabled?
-      description: Verify that there is a valid instance of Zscaler enabled.
+      description: Verify that there is a valid instance of Genians enabled.
       type: condition
       iscommand: false
       brand: ""
@@ -199,7 +152,7 @@ tasks:
                       iscontext: true
                     right:
                       value:
-                        simple: Zscaler
+                        simple: Genians
                     ignorecase: true
                 - - operator: isEqualString
                     left:
@@ -216,7 +169,7 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 960,
+          "x": 500,
           "y": 660
         }
       }
@@ -227,17 +180,17 @@ tasks:
     quietmode: 0
   "13":
     id: "13"
-    taskid: 2fc91849-c0d9-4170-81b9-c53398a241df
+    taskid: ddb19333-14f2-4337-87d5-257896a3e0a4
     type: regular
     task:
-      id: 2fc91849-c0d9-4170-81b9-c53398a241df
+      id: ddb19333-14f2-4337-87d5-257896a3e0a4
       version: -1
       name: Block IP with Genian NAC
       description: Assigns a tag to the Node specified.
-      script: Genian NAC|||genian-nac-assign-ip-tag
+      script: Genians|||genian-nac-assign-ip-tag
       type: regular
       iscommand: true
-      brand: Genian NAC
+      brand: Genians
     nexttasks:
       '#none#':
       - "2"
@@ -249,35 +202,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 960,
-          "y": 850
-        }
-      }
-    note: false
-    timertriggers: []
-    ignoreworker: false
-    skipunavailable: false
-    quietmode: 0
-  "19":
-    id: "19"
-    taskid: 53aee148-418c-49ad-8176-31c9ca887227
-    type: title
-    task:
-      id: 53aee148-418c-49ad-8176-31c9ca887227
-      version: -1
-      name: MineMeld
-      type: title
-      iscommand: false
-      brand: ""
-    nexttasks:
-      '#none#':
-      - "11"
-    separatecontext: false
-    view: |-
-      {
-        "position": {
-          "x": 500,
-          "y": 515
+          "x": 250,
+          "y": 840
         }
       }
     note: false
@@ -287,12 +213,12 @@ tasks:
     quietmode: 0
   "20":
     id: "20"
-    taskid: 8a74aeef-1b36-420f-815e-d30b19a1c002
+    taskid: e8673881-2d4d-4bdf-8647-fa72906e47a9
     type: title
     task:
-      id: 8a74aeef-1b36-420f-815e-d30b19a1c002
+      id: e8673881-2d4d-4bdf-8647-fa72906e47a9
       version: -1
-      name: Genian NAC
+      name: Genians
       type: title
       iscommand: false
       brand: ""
@@ -303,8 +229,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 960,
-          "y": 515
+          "x": 500,
+          "y": 505
         }
       }
     note: false
@@ -315,82 +241,17 @@ tasks:
 view: |-
   {
     "linkLabelsPosition": {
-      "12_2_#default#": 0.13,
-      "8_2_#default#": 0.48
+      "12_2_#default#": 0.51,
+      "8_2_#default#": 0.52
     },
     "paper": {
       "dimensions": {
         "height": 1075,
-        "width": 840,
-        "x": 500,
+        "width": 630,
+        "x": 250,
         "y": 10
       }
     }
   }
-inputs:
-- key: IP
-  value: {}
-  required: false
-  description: ""
-  playbookInputQuery: null
-outputs:
-- contextPath: CheckpointFWRule.Destination
-  description: Rule Destination.
-- contextPath: CheckpointFWRule.DestinationNegate
-  description: Rule destination negate status (True/False).
-- contextPath: PanoramaRule.Direction
-  description: Direction of the Panorama rule. Can be 'to','from', 'both'
-  type: string
-- contextPath: PanoramaRule.IP
-  description: The IP the Panorama rule blocks
-  type: string
-- contextPath: CheckpointFWRule.Name
-  description: Rule name.
-- contextPath: PanoramaRule.Name
-  description: Name of the Panorama rule
-  type: string
-- contextPath: CheckpointFWRule.UID
-  description: Rule UID.
-- contextPath: PanoramaRule
-  description: List of Panorama rules
-- contextPath: CheckpointFWRule.Type
-  description: Rule Type.
-- contextPath: CheckpointFWRule.Action
-  description: 'Rule action (Valid values are: Accept, Drop, Apply Layer, Ask, Info).'
-- contextPath: CheckpointFWRule.ActionSetting
-  description: Rule action settings.
-- contextPath: CheckpointFWRule.CustomFields
-  description: Rule custom fields.
-- contextPath: CheckpointFWRule.Data
-  description: Rule data.
-- contextPath: CheckpointFWRule.DataDirection
-  description: Rule data direction.
-- contextPath: CheckpointFWRule.DataNegate
-  description: Rule data negate status (True/False).
-- contextPath: CheckpointFWRule.Domain
-  description: Rule domain.
-- contextPath: CheckpointFWRule.Enabled
-  description: Rule status.
-- contextPath: CheckpointFWRule.Hits
-  description: Rule hits count.
-- contextPath: CheckpointFWRule.Data.Name
-  description: Rule data object name.
-- contextPath: CheckpointFWRule.Data.Domain
-  description: Information about the domain the data object belongs to.
-- contextPath: CheckpointFWRule.Domain.Name
-  description: Rule domain name.
-- contextPath: CheckpointFWRule.Domain.UID
-  description: Rule domain UID.
-- contextPath: CheckpointFWRule.Domain.Type
-  description: Rule domain type.
-- contextPath: CheckpointFWRule.Hits.FirstDate
-  description: The date of the first hit for the rule.
-- contextPath: CheckpointFWRule.Hits.LastDate
-  description: The date of the last hit for the rule.
-- contextPath: CheckpointFWRule.Hits.Level
-  description: Level of rule hits.
-- contextPath: CheckpointFWRule.Hits.Percentage
-  description: Percentage of rule hits.
-- contextPath: CheckpointFWRule.Hits.Value
-  description: Value of rule hits.
-sourceplaybookid: Block IP - Generic v2
+inputs: []
+outputs: []
