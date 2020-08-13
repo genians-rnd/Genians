@@ -1,6 +1,6 @@
 category: Network Security
 commonfields:
-  id: e1686e17-d08a-4bcd-b21e-1ff1e540585d
+  id: Genians
   version: -1
 configuration:
 - display: Server IP (e.g. 172.29.62.26)
