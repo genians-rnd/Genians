@@ -63,8 +63,8 @@ Before you can use this integration in Demisto, you need to enable certain modul
 
 You can execute these commands from the Demisto CLI, as part of an automation, or in a playbook. After you successfully execute a command, a DBot message appears in the War Room with the command details.
 
-1. [Post IP address to a tag: genians-assign-ip-tag](#Post IP address to a tag)
-2. [Delete IP address from a tag: genians-unassign-ip-tag](#Delete IP address from a tag)
+1. [Post IP address to a tag: genians-assign-ip-tag](Post IP address to a tag)
+2. [Delete IP address from a tag: genians-unassign-ip-tag](Delete IP address from a tag)
 
 ### Post IP address to a tag
 ***
